@@ -1,0 +1,289 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 13, 2022 at 02:45 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `vidbook`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(40) NOT NULL,
+  `Name` varchar(40) NOT NULL,
+  `Email` varchar(40) NOT NULL,
+  `Phone` bigint(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `Name`, `Email`, `Phone`) VALUES
+(1, 'testname', 'test@gmail.com', 1547895472),
+(3, 'Praveen Raj', 'raj@gmail.com', 8499999888);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `food`
+--
+
+CREATE TABLE `food` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `url` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `food`
+--
+
+INSERT INTO `food` (`id`, `name`, `url`) VALUES
+(1, '9 Pasta recipies', 'https://www.youtube.com/watch?v=R8IaNhYXyBo'),
+(2, 'How To Master 5 Basic Cooking Skills', 'https://www.youtube.com/watch?v=ZJy1ajvMU1k'),
+(3, 'MrBEAST BURGER Full Menu Challenge', 'https://www.youtube.com/watch?v=ZrS9vWPSQEU'),
+(4, '6 Vegetarian Chinese Take-Out-Style Dinners', 'https://www.youtube.com/watch?v=Vn0NL01RNWc'),
+(5, 'Creamy Garlic Chicken Breast Recipe', 'https://www.youtube.com/watch?v=8Er5fjgOhhc'),
+(6, 'Honey Sesame Chicken', 'https://www.youtube.com/watch?v=NqwW4BiLoBw'),
+(7, 'Winter Vegetarian Recipes To Keep You Warm ', 'https://www.youtube.com/watch?v=PLNEJFnG8gY'),
+(8, 'Gobi Manchurian Recipe', 'https://www.youtube.com/watch?v=92BshnM4KI4'),
+(9, 'Homemade Chicken Nuggets Recipe by Tiffin Box ', 'https://www.youtube.com/watch?v=njJ8FQXZmcE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `games`
+--
+
+CREATE TABLE `games` (
+  `id` int(11) NOT NULL,
+  `name` varchar(80) NOT NULL,
+  `url` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `games`
+--
+
+INSERT INTO `games` (`id`, `name`, `url`) VALUES
+(1, 'Minecraft RTX', 'https://www.youtube.com/watch?v=AdTxrggo8e8'),
+(2, 'Ultimate Storage Base-Minecraft Survival', 'https://www.youtube.com/watch?v=5I4mPLDgDyg'),
+(3, 'Red Dead Redemption 2', 'https://www.youtube.com/watch?v=TbtgzaLbz8s'),
+(4, 'Jett revive me!', 'https://www.youtube.com/watch?v=vtdn44BxiW8'),
+(5, 'GTA Online in a nutshell', 'https://www.youtube.com/watch?v=09TxtMbRUU0'),
+(6, 'Arcane!!!', 'https://www.youtube.com/watch?v=4Ps6nV4wiCE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `music`
+--
+
+CREATE TABLE `music` (
+  `id` int(11) NOT NULL,
+  `name` varchar(80) NOT NULL,
+  `url` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `music`
+--
+
+INSERT INTO `music` (`id`, `name`, `url`) VALUES
+(1, 'Heat Waves', 'https://www.youtube.com/watch?v=mRD0-GxqHVo'),
+(2, 'Drag Me Down', 'https://www.youtube.com/watch?v=Jwgf3wmiA04'),
+(3, 'Fractures', 'https://www.youtube.com/watch?v=38750lf-u5w'),
+(4, 'So Far Away', 'https://www.youtube.com/watch?v=o7iL2KzDh38'),
+(5, 'Closer', 'https://www.youtube.com/watch?v=PT2_F-1esPk'),
+(6, 'Call Me Maybe', 'https://www.youtube.com/watch?v=fWNaR-rxAic'),
+(7, 'Levitating', 'https://www.youtube.com/watch?v=w4dBufC9Igk'),
+(8, 'shape of you', 'https://www.youtube.com/watch?v=JGwWNGJdvx8');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `name` varchar(80) NOT NULL,
+  `url` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `name`, `url`) VALUES
+(1, 'Joe Biden-Narendra Modi to hold talks', 'https://www.youtube.com/watch?v=pQwchX_gc6g'),
+(2, 'Gravitas: U.S. to sell F-16 fighter jets to Turkey', 'https://www.youtube.com/watch?v=Ek5y3Sm4rN0'),
+(3, 'Gravitas: Covid pandemic: A new scare from China', 'https://www.youtube.com/watch?v=Dl3zxjWmavE'),
+(4, 'Putin bracing for military coup after purging 150 spies', 'https://www.youtube.com/watch?v=4yrOzfNtGeo'),
+(5, 'Russia launches new strikes despite peace promise', 'https://www.youtube.com/watch?v=SrVMRQvy6vI'),
+(6, 'Is Netflix killing the cinema? - BBC News', 'https://www.youtube.com/watch?v=ECVz610Rkns');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pets`
+--
+
+CREATE TABLE `pets` (
+  `id` int(11) NOT NULL,
+  `name` varchar(80) NOT NULL,
+  `url` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pets`
+--
+
+INSERT INTO `pets` (`id`, `name`, `url`) VALUES
+(1, 'Cutest baby animals Videos Compilation', 'https://www.youtube.com/watch?v=MuD7uCyz7l4'),
+(2, 'Animals Reunited With Owners After Years !', 'https://www.youtube.com/watch?v=60g7D6QF1xM'),
+(3, 'Best Friend - Cute and Funny Animals Videos Compilation', 'https://www.youtube.com/watch?v=gWmsvJK7F3s'),
+(4, 'Funny Cats Compilation', 'https://www.youtube.com/watch?v=JxS5E-kZc2s'),
+(5, 'Try Not To Laugh ', 'https://www.youtube.com/watch?v=z7xbI_N_6ls'),
+(6, 'Funny Parrots Going Crazy', 'https://www.youtube.com/watch?v=dW2utwg9oOg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `travel`
+--
+
+CREATE TABLE `travel` (
+  `id` int(11) NOT NULL,
+  `name` varchar(80) NOT NULL,
+  `url` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `travel`
+--
+
+INSERT INTO `travel` (`id`, `name`, `url`) VALUES
+(1, '25 Greatest Natural Wonders of the World', 'https://www.youtube.com/watch?v=3SsK-cxlj_w'),
+(2, 'Lonavala - Traveling in Monsoon', 'https://www.youtube.com/watch?v=xOttFdfJz-E'),
+(3, 'Welcome to India ! [CINEMATIC TRAVEL FILM]', 'https://www.youtube.com/watch?v=35npVaFGHMY'),
+(4, 'BEAUTY OF MANALI', 'https://www.youtube.com/watch?v=nkwLjnragtw'),
+(5, 'Vietnam - Land of ancient secrets | Cinematic Travel', 'https://www.youtube.com/watch?v=DIgv-e18OzA'),
+(6, '10 Best Places to Visit in Malaysia', 'https://www.youtube.com/watch?v=sKDQFvw-wrM');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `food`
+--
+ALTER TABLE `food`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `games`
+--
+ALTER TABLE `games`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `music`
+--
+ALTER TABLE `music`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pets`
+--
+ALTER TABLE `pets`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `travel`
+--
+ALTER TABLE `travel`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `food`
+--
+ALTER TABLE `food`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `games`
+--
+ALTER TABLE `games`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `music`
+--
+ALTER TABLE `music`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `pets`
+--
+ALTER TABLE `pets`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `travel`
+--
+ALTER TABLE `travel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
